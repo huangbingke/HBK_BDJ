@@ -31,16 +31,18 @@
 
 - (void)loadModel:(HBK_HomeBaseModel *)model {
     if ([model isKindOfClass:[HBK_HomeVedioModel class]]) {
+        self.bgImageView.hidden = NO;
         HBK_HomeVedioModel *vedioModel = (HBK_HomeVedioModel *)model;
         [self.bgImageView sd_setImageWithURL:[NSURL URLWithString:vedioModel.image_small]
                             placeholderImage:[UIImage imageNamed:@"imageBackground"]
                                      options:SDWebImageLowPriority];
         self.playCountLabel.text = vedioModel.playcount ? [NSString stringWithFormat:@"%ld播放", vedioModel.playcount] : @"";
-//        vedioModel.cellHeight = vedioModel.height / vedioModel.width * (kScreenWidth-10) + 10;
-        
         NSInteger minute = vedioModel.videotime / 60;
         NSInteger second = vedioModel.videotime % 60;
         self.timeLabel.text = [NSString stringWithFormat:@"%02zd:%02zd",minute,second];
+    } else {
+        NSLog(@"===========");
+        self.bgImageView.image = [UIImage imageNamed:@"imageBackground"];
     }
 }
 

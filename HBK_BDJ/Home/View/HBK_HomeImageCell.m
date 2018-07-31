@@ -36,6 +36,7 @@
 
 - (void)loadModel:(HBK_HomeBaseModel *)model {
     if ([model isKindOfClass:[HBK_HomeImageModel class]]) {
+        self.contentImageView.hidden = NO;
         HBK_HomeImageModel *imageModel = (HBK_HomeImageModel *)model;
         [self configureImageWithUrl:imageModel.image_small];
         if (imageModel.isBigPic) {
@@ -53,13 +54,17 @@
                 self.gifImageView.hidden = YES;
             }
         }
+    } else {
+        NSLog(@"------------");
+        self.placeHoldImageView.hidden = NO;
+        self.contentImageView.hidden = YES;
     }
 }
 
 - (void)configureImageWithUrl:(NSString *)url {
         [self.contentImageView sd_setImageWithURL:[NSURL URLWithString:url]
                                  placeholderImage:nil
-                                          options:SDWebImageHighPriority
+                                          options:SDWebImageLowPriority
                                          progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
                                              dispatch_async(dispatch_get_main_queue(), ^{
                                                  self.placeHoldImageView.hidden = NO;

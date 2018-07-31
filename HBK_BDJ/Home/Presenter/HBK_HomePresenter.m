@@ -18,7 +18,7 @@ NSString * const kHomeBottomCellID = @"kHomeBottomCellID";
 @interface HBK_HomePresenter ()
 
 @property (nonatomic, strong) NSMutableArray <NSMutableArray <HBK_HomeBaseModel *> *> *homeDataArray;
-@property (nonatomic, strong)NSString *maxtime;
+@property (nonatomic, strong) NSString *maxtime;
 
 @end
 @implementation HBK_HomePresenter

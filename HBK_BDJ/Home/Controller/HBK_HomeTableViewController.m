@@ -13,6 +13,7 @@
 #import "HBK_HomeImageCell.h"
 #import "HBK_HomeVedioCell.h"
 #import "HBK_HomeBottomCell.h"
+#import "HBK_HomeBaseCell.h"
 @interface HBK_HomeTableViewController ()<HBK_HomeProtocol, UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate>
 
 @property (nonatomic, strong) HBK_HomePresenter *homePresenter;
@@ -164,7 +165,17 @@
         }
     }
 }
-
+- (void)tableView:(UITableView *)tableView willDisplayCell:(nonnull HBK_HomeBaseCell *)cell forRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    if (tableView.dragging || tableView.decelerating) {
+        HBK_HomeBaseModel *currentModel = self.homePresenter.homeDataArray[indexPath.section][indexPath.row];
+        if ([currentModel isKindOfClass:[HBK_HomeImageModel class]]) {
+            [cell loadModel:nil];
+        }
+        if ([currentModel isKindOfClass:[HBK_HomeVedioModel class]]) {
+            [cell loadModel:nil];
+        }
+    }
+}
 
 #pragma mark - Getter -
 - (HBK_HomePresenter *)homePresenter {

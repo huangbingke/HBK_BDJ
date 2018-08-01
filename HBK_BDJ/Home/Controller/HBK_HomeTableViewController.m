@@ -14,6 +14,7 @@
 #import "HBK_HomeVedioCell.h"
 #import "HBK_HomeBottomCell.h"
 #import "HBK_HomeBaseCell.h"
+#import "HBK_ShowImageViewController.h"
 @interface HBK_HomeTableViewController ()<HBK_HomeProtocol, UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate>
 
 @property (nonatomic, strong) HBK_HomePresenter *homePresenter;
@@ -139,6 +140,16 @@
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 15)];
     headerView.backgroundColor = UIColorFromRGBValue(0XF8F8F8);
     return headerView;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    HBK_HomeBaseModel *currentModel = self.homePresenter.homeDataArray[indexPath.section][indexPath.row];
+    if ([currentModel isKindOfClass:[HBK_HomeImageModel class]]) {
+        HBK_HomeImageModel *imageModel = (HBK_HomeImageModel *)currentModel;
+        HBK_ShowImageViewController *imageVC = [[HBK_ShowImageViewController alloc] init];
+        imageVC.imageModel = imageModel;
+        [self presentViewController:imageVC animated:YES completion:nil];
+    }
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {

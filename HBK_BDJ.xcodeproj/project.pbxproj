@@ -28,6 +28,7 @@
 		0F26BC00210AA5D800F4D7BF /* HBK_NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F26BBF0210AA5D800F4D7BF /* HBK_NavigationViewController.m */; };
 		0F26BC01210AA5D800F4D7BF /* HBK_BasePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F26BBF1210AA5D800F4D7BF /* HBK_BasePresenter.m */; };
 		0F26BC02210AA5D800F4D7BF /* HBK_BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F26BBF2210AA5D800F4D7BF /* HBK_BaseViewController.m */; };
+		0F26BC0521113CE400F4D7BF /* HBK_ShowImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F26BC0421113CE200F4D7BF /* HBK_ShowImageViewController.m */; };
 		3810BA0B0A97C243A4796608 /* libPods-HBK_BDJ.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F2C134AB9C76CCA4A42C96 /* libPods-HBK_BDJ.a */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,8 @@
 		0F26BBF0210AA5D800F4D7BF /* HBK_NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBK_NavigationViewController.m; sourceTree = "<group>"; };
 		0F26BBF1210AA5D800F4D7BF /* HBK_BasePresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBK_BasePresenter.m; sourceTree = "<group>"; };
 		0F26BBF2210AA5D800F4D7BF /* HBK_BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HBK_BaseViewController.m; sourceTree = "<group>"; };
+		0F26BC0321113CE200F4D7BF /* HBK_ShowImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBK_ShowImageViewController.h; sourceTree = "<group>"; };
+		0F26BC0421113CE200F4D7BF /* HBK_ShowImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HBK_ShowImageViewController.m; sourceTree = "<group>"; };
 		0F7A338641F1C2F3E93D7A50 /* Pods-HBK_BDJ.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HBK_BDJ.release.xcconfig"; path = "Pods/Target Support Files/Pods-HBK_BDJ/Pods-HBK_BDJ.release.xcconfig"; sourceTree = "<group>"; };
 		88F2C134AB9C76CCA4A42C96 /* libPods-HBK_BDJ.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HBK_BDJ.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E54E2D9DD0B202E55AECAD32 /* Pods-HBK_BDJ.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HBK_BDJ.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HBK_BDJ/Pods-HBK_BDJ.debug.xcconfig"; sourceTree = "<group>"; };
@@ -165,6 +168,8 @@
 				0F26BBD2210AA5D800F4D7BF /* HBK_HomeViewController.m */,
 				0F26BBD3210AA5D800F4D7BF /* HBK_HomeTableViewController.h */,
 				0F26BBD1210AA5D800F4D7BF /* HBK_HomeTableViewController.m */,
+				0F26BC0321113CE200F4D7BF /* HBK_ShowImageViewController.h */,
+				0F26BC0421113CE200F4D7BF /* HBK_ShowImageViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -375,6 +380,7 @@
 				0F26BC01210AA5D800F4D7BF /* HBK_BasePresenter.m in Sources */,
 				0F26BBFB210AA5D800F4D7BF /* HBK_HomeTextCell.m in Sources */,
 				0F26BBF4210AA5D800F4D7BF /* HBK_HomePresenter.m in Sources */,
+				0F26BC0521113CE400F4D7BF /* HBK_ShowImageViewController.m in Sources */,
 				0F26BBF5210AA5D800F4D7BF /* HBK_HomeTableViewController.m in Sources */,
 				0F26BBB3210AA57700F4D7BF /* AppDelegate.m in Sources */,
 				0F26BBF7210AA5D800F4D7BF /* HBK_HomeBaseModel.m in Sources */,

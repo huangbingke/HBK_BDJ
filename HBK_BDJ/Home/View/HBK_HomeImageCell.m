@@ -129,6 +129,7 @@
         [_seeBigBtn setImage:[UIImage imageNamed:@"see-big-picture"] forState:(UIControlStateNormal)];
         [_seeBigBtn setBackgroundImage:[UIImage imageNamed:@"see-big-picture-background"] forState:(UIControlStateNormal)];
         [_seeBigBtn addTarget:self action:@selector(clickSeeBigPicture) forControlEvents:(UIControlEventTouchUpInside)];
+        _seeBigBtn.userInteractionEnabled = NO;
     }
     return _seeBigBtn;
 }
